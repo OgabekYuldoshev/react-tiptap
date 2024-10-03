@@ -4,6 +4,7 @@
   "description": "",
   "main": "dist/react-note.js",
   "module": "dist/react-note.esm.js",
+  "types": "dist/index.d.ts",
   "files": [
     "dist"
   ],

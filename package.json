@@ -4,7 +4,7 @@
   "scripts": {
     "build": "turbo build",
     "dev": "turbo dev",
-    "lint": "turbo lint"
+    "check": "turbo check"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.3",

@@ -1,4 +1,5 @@
-import { URL, fileURLToPath } from 'node:url'
+// biome-ignore lint/style/useNodejsImportProtocol: <explanation>
+import { URL, fileURLToPath } from 'url'
 import react from '@vitejs/plugin-react-swc'
 import { defineConfig } from 'vite'
 // https://vitejs.dev/config/

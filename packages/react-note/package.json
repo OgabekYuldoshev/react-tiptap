@@ -1,17 +1,22 @@
 {
   "name": "react-note",
   "version": "1.0.0",
-  "description": "",
-  "main": "dist/react-note.js",
-  "module": "dist/react-note.esm.js",
-  "types": "dist/index.d.ts",
+  "description": "React tiptap rich text editor",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./globals.css": "./dist/index.css"
+  },
   "files": [
     "dist"
   ],
   "type": "module",
   "scripts": {
-    "build": "rollup -c --bundleConfigAsCjs",
-    "dev": "rollup -c --bundleConfigAsCjs --watch",
+    "build": "tsup",
+    "dev": "tsup --watch",
     "check": "pnpm biome check --write src"
   },
   "keywords": [],
@@ -22,15 +27,19 @@
     "react-dom": "^18.3.1"
   },
   "devDependencies": {
-    "@rollup/plugin-commonjs": "^28.0.0",
-    "@rollup/plugin-node-resolve": "^15.3.0",
-    "@rollup/plugin-terser": "^0.4.4",
-    "@rollup/plugin-typescript": "^12.1.0",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
-    "rollup": "^4.24.0",
-    "rollup-plugin-peer-deps-external": "^2.2.4",
-    "rollup-plugin-postcss": "^4.0.2",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.13",
+    "tsup": "^8.3.0",
     "typescript": "^5.6.2"
+  },
+  "dependencies": {
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.447.0",
+    "tailwind-merge": "^2.5.2",
+    "tailwindcss-animate": "^1.0.7"
   }
 }

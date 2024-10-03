@@ -1,4 +1,4 @@
 {
 	"editor.defaultFormatter": "biomejs.biome",
-	"conventionalCommits.scopes": ["git"]
+	"conventionalCommits.scopes": ["git", "deps"]
 }

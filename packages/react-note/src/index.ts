@@ -1,5 +1,9 @@
 import "./assets/main.css";
 
-export type { ReactNoteContextProps } from "./context"
-export type { ReactNoteEditorProps } from "./ReactNoteEditor"
-export { default as ReactNoteEditor } from "./ReactNoteEditor"
+export type { ReactNoteContextProps } from "./context";
+export { ReactNoteEditor } from "./ReactNoteEditor";
+
+export type {
+	ReactNoteEditorProps,
+	ReactNoteEditorFactory,
+} from "./ReactNoteEditor";

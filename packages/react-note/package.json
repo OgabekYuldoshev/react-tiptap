@@ -20,7 +20,7 @@
     "check": "pnpm biome check --write src"
   },
   "keywords": [],
-  "author": "",
+  "author": "Ogabek Yuldoshev <https://yuldashoff.uz/>",
   "license": "ISC",
   "peerDependencies": {
     "@tiptap/react": "^2.8.0",

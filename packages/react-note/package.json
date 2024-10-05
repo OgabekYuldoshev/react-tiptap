@@ -19,7 +19,13 @@
     "dev": "tsup --watch",
     "check": "pnpm biome check --write src"
   },
-  "keywords": [],
+  "keywords": [
+    "react",
+    "react-note",
+    "tiptap",
+    "rich-text-editor",
+    "rich-text-editor-react"
+  ],
   "author": "Ogabek Yuldoshev <https://yuldashoff.uz/>",
   "license": "ISC",
   "peerDependencies": {

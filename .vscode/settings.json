@@ -1,4 +1,11 @@
 {
 	"editor.defaultFormatter": "biomejs.biome",
-	"conventionalCommits.scopes": ["git", "deps", "component"]
+	"conventionalCommits.scopes": [
+		"git",
+		"deps",
+		"component"
+	],
+	"[typescript]": {
+		"editor.defaultFormatter": "biomejs.biome"
+	}
 }

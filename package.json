@@ -4,14 +4,10 @@
   "scripts": {
     "build": "turbo build",
     "dev": "turbo dev",
-    "check": "turbo check",
-    "release": "turbo release"
+    "check": "turbo check"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.3",
-    "@semantic-release/changelog": "^6.0.3",
-    "@semantic-release/git": "^10.0.1",
-    "semantic-release": "^24.1.2",
     "simple-git-hooks": "^2.11.1",
     "turbo": "^2.1.3",
     "typescript": "^5.4.5"

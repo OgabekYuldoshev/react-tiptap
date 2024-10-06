@@ -16,13 +16,12 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '20'
-      - uses: pnpm/action-setup@v4
       - name: Install dependencies
-        run: pnpm install
+        run: npm install
       - name: Build
-        run: pnpm build
+        run: npm run build
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: pnpm release
+        run: npm run release

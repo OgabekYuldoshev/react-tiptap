@@ -2,6 +2,9 @@
   "name": "react-note",
   "version": "1.0.0",
   "description": "React tiptap rich text editor",
+  "publishConfig": {
+    "access": "public"
+  },
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
@@ -17,7 +20,8 @@
   "scripts": {
     "build": "tsup",
     "dev": "tsup --watch",
-    "check": "pnpm biome check --write src"
+    "check": "pnpm biome check --write src",
+    "release": "semantic-release"
   },
   "keywords": [
     "react",
@@ -39,6 +43,7 @@
     "@types/react-dom": "^18.3.0",
     "autoprefixer": "^10.4.20",
     "postcss": "^8.4.47",
+    "semantic-release": "^24.1.2",
     "tailwindcss": "^3.4.13",
     "tsup": "^8.3.0",
     "typescript": "^5.6.2"

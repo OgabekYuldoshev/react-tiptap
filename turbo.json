@@ -8,6 +8,7 @@
       "outputs": ["dist/**"]
     },
     "check": {},
+    "release": {},
     "dev": {
       "cache": false,
       "persistent": true

@@ -8,7 +8,7 @@
     "prepublish": "turbo run build --filter=react-note",
     "changeset": "changeset",
     "pv": "changeset version",
-    "release": "changeset publish --access public"
+    "release": "changeset publish"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.3",

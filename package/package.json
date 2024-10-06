@@ -2,26 +2,24 @@
   "name": "react-tiptap",
   "version": "2.0.0",
   "description": "React tiptap rich text editor",
-  "publishConfig": {
-    "access": "public"
-  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "import": "./dist/index.js",
-      "require": "./dist/index.cjs"
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
     },
     "./globals.css": "./dist/index.css"
   },
   "files": [
     "dist"
   ],
-  "type": "module",
   "scripts": {
     "build": "tsup",
     "dev": "tsup --watch",
-    "check": "pnpm biome check --write src",
-    "release": "semantic-release"
+    "check": "pnpm biome check --write src"
   },
   "keywords": [
     "react",

@@ -6,6 +6,7 @@ on:
 jobs:
   release:
     runs-on: ubuntu-latest
+    if: github.repository == 'OgabekYuldoshev/react-note'
     steps:
       - uses: actions/checkout@v4
         with:

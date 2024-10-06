@@ -1,5 +1,5 @@
 {
-  "name": "react-note",
+  "name": "react-tiptap-project",
   "private": true,
   "scripts": {
     "build": "turbo build",
@@ -7,7 +7,6 @@
     "check": "turbo check",
     "prepublish": "turbo run build --filter=react-note",
     "changeset": "changeset",
-    "pv": "changeset version",
     "release": "changeset publish"
   },
   "devDependencies": {

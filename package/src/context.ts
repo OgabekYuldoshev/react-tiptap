@@ -2,18 +2,18 @@ import type { Editor } from "@tiptap/react";
 import { createContext, useContext } from "react";
 
 export type ReactNoteContextProps = {
-    editor: Editor;
+	editor: Editor;
 };
 export const ReactNoteContext = createContext<ReactNoteContextProps>({
-    editor: {} as Editor,
+	editor: {} as Editor,
 });
 
 export const useNote = () => {
-    const ctx = useContext(ReactNoteContext)
+	const ctx = useContext(ReactNoteContext);
 
-    if (!ctx) {
-        throw new Error("ReactNoteContext should be inside a provider")
-    }
+	if (!ctx) {
+		throw new Error("ReactNoteContext should be inside a provider");
+	}
 
-    return ctx
-}
+	return ctx;
+};

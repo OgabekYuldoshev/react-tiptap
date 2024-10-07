@@ -1,6 +1,6 @@
 import { useEditor } from "@tiptap/react";
 import { StarterKit } from "@tiptap/starter-kit";
-import { ReactNoteEditor } from "react-tiptap";
+import { ReactTipTapEditor } from "react-tiptap";
 
 const App = () => {
 	const editor = useEditor({
@@ -9,33 +9,33 @@ const App = () => {
 
 	return (
 		<div className="mx-auto w-full max-w-screen-lg my-4">
-			<ReactNoteEditor editor={editor}>
-				<ReactNoteEditor.Toolbar>
-					<ReactNoteEditor.Undo />
-					<ReactNoteEditor.Redo />
-					<ReactNoteEditor.Spacer className="my-auto" size={18} mode="y" />
-					<ReactNoteEditor.Bold />
-					<ReactNoteEditor.Italic />
-					<ReactNoteEditor.Strike />
-					<ReactNoteEditor.Code />
-					<ReactNoteEditor.Spacer className="my-auto" size={18} mode="y" />
-					<ReactNoteEditor.Blockquote />
-					<ReactNoteEditor.BulletList />
-					<ReactNoteEditor.OrderedList />
-					<ReactNoteEditor.CodeBlock />
-					<ReactNoteEditor.Spacer className="my-auto" size={18} mode="y" />
-					<ReactNoteEditor.H1 />
-					<ReactNoteEditor.H2 />
-					<ReactNoteEditor.H3 />
-					<ReactNoteEditor.H4 />
-					<ReactNoteEditor.H5 />
-					<ReactNoteEditor.H6 />
-					<ReactNoteEditor.Spacer className="my-auto" size={18} mode="y" />
-					<ReactNoteEditor.HorizontalRule />
-					<ReactNoteEditor.HardBreak />
-				</ReactNoteEditor.Toolbar>
-				<ReactNoteEditor.Content />
-			</ReactNoteEditor>
+			<ReactTipTapEditor editor={editor}>
+				<ReactTipTapEditor.Toolbar>
+					<ReactTipTapEditor.Undo />
+					<ReactTipTapEditor.Redo />
+					<ReactTipTapEditor.Spacer className="my-auto" size={18} mode="y" />
+					<ReactTipTapEditor.Bold />
+					<ReactTipTapEditor.Italic />
+					<ReactTipTapEditor.Strike />
+					<ReactTipTapEditor.Code />
+					<ReactTipTapEditor.Spacer className="my-auto" size={18} mode="y" />
+					<ReactTipTapEditor.Blockquote />
+					<ReactTipTapEditor.BulletList />
+					<ReactTipTapEditor.OrderedList />
+					<ReactTipTapEditor.CodeBlock />
+					<ReactTipTapEditor.Spacer className="my-auto" size={18} mode="y" />
+					<ReactTipTapEditor.H1 />
+					<ReactTipTapEditor.H2 />
+					<ReactTipTapEditor.H3 />
+					<ReactTipTapEditor.H4 />
+					<ReactTipTapEditor.H5 />
+					<ReactTipTapEditor.H6 />
+					<ReactTipTapEditor.Spacer className="my-auto" size={18} mode="y" />
+					<ReactTipTapEditor.HorizontalRule />
+					<ReactTipTapEditor.HardBreak />
+				</ReactTipTapEditor.Toolbar>
+				<ReactTipTapEditor.Content />
+			</ReactTipTapEditor>
 		</div>
 	);
 };

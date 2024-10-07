@@ -2,18 +2,18 @@ import type { Editor } from "@tiptap/react";
 import type React from "react";
 import type { PropsWithChildren } from "react";
 import Content from "./components/Content";
+import Spacer from "./components/Spacer";
 import Toolbar from "./components/Toolbar";
 import { ReactNoteContext } from "./context";
 import * as actions from "./lib/actions";
 import { cn } from "./lib/utils";
-import Spacer from "./components/Spacer";
 
-export type ReactNoteEditorProps = PropsWithChildren<{
+export type ReactTipTapEditorProps = PropsWithChildren<{
 	editor: Editor | null;
 	className?: string;
 }>;
 
-export type ReactNoteEditorFactory = React.FC<ReactNoteEditorProps> & {
+export type ReactTipTapEditorFactory = React.FC<ReactTipTapEditorProps> & {
 	Content: typeof Content;
 	Toolbar: typeof Toolbar;
 	Spacer: typeof Spacer;
@@ -37,7 +37,7 @@ export type ReactNoteEditorFactory = React.FC<ReactNoteEditorProps> & {
 	H6: typeof actions.H6;
 };
 
-export const ReactNoteEditor: ReactNoteEditorFactory = ({
+export const ReactTipTapEditor: ReactTipTapEditorFactory = ({
 	editor,
 	children,
 	className,
@@ -57,25 +57,25 @@ export const ReactNoteEditor: ReactNoteEditorFactory = ({
 	);
 };
 
-ReactNoteEditor.displayName = "ReactNoteEditor";
-ReactNoteEditor.Content = Content;
-ReactNoteEditor.Toolbar = Toolbar;
-ReactNoteEditor.Spacer = Spacer;
-ReactNoteEditor.Undo = actions.Undo;
-ReactNoteEditor.Redo = actions.Redo;
-ReactNoteEditor.Bold = actions.Bold;
-ReactNoteEditor.Code = actions.Code;
-ReactNoteEditor.Italic = actions.Italic;
-ReactNoteEditor.Strike = actions.Strike;
-ReactNoteEditor.HorizontalRule = actions.HorizontalRule;
-ReactNoteEditor.HardBreak = actions.HardBreak;
-ReactNoteEditor.Blockquote = actions.Blockquote;
-ReactNoteEditor.BulletList = actions.BulletList;
-ReactNoteEditor.OrderedList = actions.OrderedList;
-ReactNoteEditor.CodeBlock = actions.CodeBlock;
-ReactNoteEditor.H1 = actions.H1;
-ReactNoteEditor.H2 = actions.H2;
-ReactNoteEditor.H3 = actions.H3;
-ReactNoteEditor.H4 = actions.H4;
-ReactNoteEditor.H5 = actions.H5;
-ReactNoteEditor.H6 = actions.H6;
+ReactTipTapEditor.displayName = "ReactTipTapEditor";
+ReactTipTapEditor.Content = Content;
+ReactTipTapEditor.Toolbar = Toolbar;
+ReactTipTapEditor.Spacer = Spacer;
+ReactTipTapEditor.Undo = actions.Undo;
+ReactTipTapEditor.Redo = actions.Redo;
+ReactTipTapEditor.Bold = actions.Bold;
+ReactTipTapEditor.Code = actions.Code;
+ReactTipTapEditor.Italic = actions.Italic;
+ReactTipTapEditor.Strike = actions.Strike;
+ReactTipTapEditor.HorizontalRule = actions.HorizontalRule;
+ReactTipTapEditor.HardBreak = actions.HardBreak;
+ReactTipTapEditor.Blockquote = actions.Blockquote;
+ReactTipTapEditor.BulletList = actions.BulletList;
+ReactTipTapEditor.OrderedList = actions.OrderedList;
+ReactTipTapEditor.CodeBlock = actions.CodeBlock;
+ReactTipTapEditor.H1 = actions.H1;
+ReactTipTapEditor.H2 = actions.H2;
+ReactTipTapEditor.H3 = actions.H3;
+ReactTipTapEditor.H4 = actions.H4;
+ReactTipTapEditor.H5 = actions.H5;
+ReactTipTapEditor.H6 = actions.H6;

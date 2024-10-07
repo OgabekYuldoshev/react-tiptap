@@ -1,9 +1,9 @@
-import "./assets/main.css";
+import "./assets/base.scss";
 
-export type { ReactNoteContextProps } from "./context";
+export { ReactNoteContextProps } from "./context";
 export { ReactTipTapEditor } from "./ReactTipTapEditor";
 
-export type {
+export {
 	ReactTipTapEditorProps,
 	ReactTipTapEditorFactory,
 } from "./ReactTipTapEditor";

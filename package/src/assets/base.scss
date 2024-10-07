@@ -1,0 +1,20 @@
+:root {
+    --rt-background: #ffffff;
+    --rt-foreground: #0a0a0a;
+    --rt-primary: #161616;
+    --rt-primary-foreground: #fafafa;
+    --rt-muted: #f0f0f0;
+    --rt-muted-foreground: #757575;
+    --rt-border: #e5e5e5;
+    --rt-radius: 0.5rem;
+
+    .dark {
+        --rt-background: #0a0a0a;
+        --rt-foreground: #fafafa;
+        --rt-primary: #fafafa;
+        --rt-primary-foreground: #161616;
+        --rt-muted: #282828;
+        --rt-muted-foreground: #a3a3a3;
+        --rt-border: #282828;
+    }
+}

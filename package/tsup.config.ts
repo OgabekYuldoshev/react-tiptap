@@ -1,16 +1,22 @@
 import { defineConfig } from "tsup";
+import { sassPlugin } from 'esbuild-sass-plugin'
+
 const packageJson = require("./package.json");
 
-const externalDeps = Object.keys(packageJson.peerDependencies);
-
-export default defineConfig({
-	entry: ["src/index.ts"],
-	format: ["cjs", "esm"],
-	external: externalDeps,
-	outDir: "dist",
-	dts: true,
-	treeshake: true,
-	minify: true,
-	sourcemap: true,
-	clean: true,
+export default defineConfig((options) => {
+	return {
+		entry: ["src/index.ts"],
+		format: ["cjs", "esm"],
+		name: 'react-tiptap',
+		external: Object.keys(packageJson.peerDependencies),
+		keepNames: true,
+		dts: true,
+		treeshake: true,
+		minify: !options.watch,
+		sourcemap: true,
+		clean: true,
+		esbuildPlugins: [
+			sassPlugin()
+		]
+	}
 });

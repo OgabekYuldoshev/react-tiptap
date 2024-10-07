@@ -1,8 +1,9 @@
 import { EditorContent } from "@tiptap/react";
-import { useNote } from "../context";
+import * as React from "react";
+import { useTiptap } from "../context";
 
 const Content = () => {
-	const { editor } = useNote();
+	const { editor } = useTiptap();
 	return (
 		<div className="rn-px-4 rn-py-2">
 			<EditorContent editor={editor} />

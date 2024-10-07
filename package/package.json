@@ -1,25 +1,27 @@
 {
   "name": "react-tiptap",
-  "version": "0.0.2",
+  "version": "0.0.0",
   "description": "React tiptap rich text editor",
+  "source": "./src/index.ts",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
+  "typings": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "import": {
-        "types": "./dist/index.d.mts",
-        "default": "./dist/index.mjs"
-      },
       "require": {
         "types": "./dist/index.d.ts",
         "default": "./dist/index.js"
+      },
+      "import": {
+        "types": "./dist/index.d.mts",
+        "default": "./dist/index.mjs"
       }
     },
-    "./globals.css": "./dist/index.css"
+    "./base.css": "./dist/index.css"
   },
   "files": [
-    "dist"
+    "dist",
+    "src"
   ],
   "homepage": "https://react-tiptap.vercel.app/",
   "repository": {
@@ -29,7 +31,8 @@
   "scripts": {
     "build": "tsup",
     "dev": "tsup --watch",
-    "check": "pnpm biome check --write src"
+    "check": "pnpm biome check --write src",
+    "size": "size-limit"
   },
   "keywords": [
     "react",
@@ -41,17 +44,34 @@
   ],
   "author": "Ogabek Yuldoshev <https://yuldashoff.uz/>",
   "license": "ISC",
+  "size-limit": [
+    {
+      "path": "dist/react-tiptap.cjs.production.min.js",
+      "limit": "500 KB"
+    },
+    {
+      "path": "dist/react-tiptap.esm.js",
+      "limit": "500 KB"
+    }
+  ],
   "peerDependencies": {
+    "@tiptap/core": "^2.8.0",
     "@tiptap/react": "^2.8.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
   "devDependencies": {
+    "@size-limit/preset-small-lib": "^11.1.6",
+    "@tiptap/core": "^2.8.0",
     "@tiptap/react": "^2.8.0",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "autoprefixer": "^10.4.20",
+    "cssnano": "^7.0.6",
+    "esbuild-sass-plugin": "^3.3.1",
     "postcss": "^8.4.47",
+    "sass": "^1.79.4",
+    "size-limit": "^11.1.6",
     "tailwindcss": "^3.4.13",
     "tsup": "^8.3.0",
     "typescript": "^5.6.2"

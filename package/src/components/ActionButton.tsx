@@ -2,7 +2,7 @@ import { Slot } from "@radix-ui/react-slot";
 import * as React from "react";
 
 import { icons } from "lucide-react";
-import { useNote } from "../context";
+import { useTiptap } from "../context";
 import { cn } from "../lib/utils";
 
 export interface ButtonProps
@@ -46,7 +46,8 @@ export function createAction({
 }: CreateActioProps) {
 	const Action = React.forwardRef<HTMLButtonElement, ButtonProps>(
 		(props, ref) => {
-			const { editor } = useNote();
+			const { editor } = useTiptap();
+			
 			const Icon = icons[icon];
 			return (
 				<ActionButton

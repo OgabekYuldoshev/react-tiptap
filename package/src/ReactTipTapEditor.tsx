@@ -1,10 +1,10 @@
-import type { Editor } from "@tiptap/react";
-import type React from "react";
-import type { PropsWithChildren } from "react";
+import { Editor } from "@tiptap/core";
+import * as React from "react";
+import { PropsWithChildren } from "react";
 import Content from "./components/Content";
 import Spacer from "./components/Spacer";
 import Toolbar from "./components/Toolbar";
-import { ReactNoteContext } from "./context";
+import { ReactTipTapEditorContext } from "./context";
 import * as actions from "./lib/actions";
 import { cn } from "./lib/utils";
 
@@ -47,13 +47,13 @@ export const ReactTipTapEditor: ReactTipTapEditorFactory = ({
 	}
 
 	return (
-		<ReactNoteContext.Provider value={{ editor }}>
+		<ReactTipTapEditorContext.Provider value={{ editor }}>
 			<div
 				className={cn("react-note rn-w-full rn-border rn-rounded", className)}
 			>
 				{children}
 			</div>
-		</ReactNoteContext.Provider>
+		</ReactTipTapEditorContext.Provider>
 	);
 };
 

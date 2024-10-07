@@ -1,3 +1,4 @@
+import "react-tiptap/base.css";
 import { useEditor } from "@tiptap/react";
 import { StarterKit } from "@tiptap/starter-kit";
 import { ReactTipTapEditor } from "react-tiptap";

@@ -1,5 +1,5 @@
-import type React from "react";
-import type { PropsWithChildren } from "react";
+import * as React from "react";
+import { PropsWithChildren } from "react";
 
 interface ToolbarProps extends PropsWithChildren {}
 

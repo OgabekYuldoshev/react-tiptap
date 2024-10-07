@@ -1,0 +1,20 @@
+.wrapper {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    box-sizing: border-box;
+    border-radius: var(--rt-radius);
+    transition: 0.1s all ease-in-out;
+
+    &:hover {
+        background-color: var(--rt-accent);
+        color: var(--rt-accent-foreground);
+    }
+
+    &--active {
+        background-color: var(--rt-accent);
+        color: var(--rt-accent-foreground);
+    }
+}

@@ -14,24 +14,24 @@ const App = () => {
 				<ReactTipTapEditor.Toolbar>
 					<ReactTipTapEditor.Undo />
 					<ReactTipTapEditor.Redo />
-					<ReactTipTapEditor.Spacer className="my-auto" size={18} mode="y" />
+					<ReactTipTapEditor.Divider length={18} orientation="y" />
 					<ReactTipTapEditor.Bold />
 					<ReactTipTapEditor.Italic />
 					<ReactTipTapEditor.Strike />
 					<ReactTipTapEditor.Code />
-					<ReactTipTapEditor.Spacer className="my-auto" size={18} mode="y" />
+					<ReactTipTapEditor.Divider length={18} orientation="y" />
 					<ReactTipTapEditor.Blockquote />
 					<ReactTipTapEditor.BulletList />
 					<ReactTipTapEditor.OrderedList />
 					<ReactTipTapEditor.CodeBlock />
-					<ReactTipTapEditor.Spacer className="my-auto" size={18} mode="y" />
+					<ReactTipTapEditor.Divider length={18} orientation="y" />
 					<ReactTipTapEditor.H1 />
 					<ReactTipTapEditor.H2 />
 					<ReactTipTapEditor.H3 />
 					<ReactTipTapEditor.H4 />
 					<ReactTipTapEditor.H5 />
 					<ReactTipTapEditor.H6 />
-					<ReactTipTapEditor.Spacer className="my-auto" size={18} mode="y" />
+					<ReactTipTapEditor.Divider length={18} orientation="y" />
 					<ReactTipTapEditor.HorizontalRule />
 					<ReactTipTapEditor.HardBreak />
 				</ReactTipTapEditor.Toolbar>

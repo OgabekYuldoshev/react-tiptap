@@ -1,5 +1,5 @@
+import stylePlugin from 'esbuild-style-plugin'
 import { defineConfig } from "tsup";
-import { sassPlugin } from 'esbuild-sass-plugin'
 
 const packageJson = require("./package.json");
 
@@ -16,7 +16,13 @@ export default defineConfig((options) => {
 		sourcemap: true,
 		clean: true,
 		esbuildPlugins: [
-			sassPlugin()
+			stylePlugin({
+				renderOptions: {
+					sassOptions: {
+						silenceDeprecations: ['legacy-js-api'],
+					}
+				}
+			})
 		]
 	}
 });

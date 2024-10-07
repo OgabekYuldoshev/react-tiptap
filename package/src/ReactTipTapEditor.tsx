@@ -2,8 +2,8 @@ import { Editor } from "@tiptap/core";
 import * as React from "react";
 import { PropsWithChildren } from "react";
 import Content from "./components/Content";
-import Spacer from "./components/Spacer";
-import Toolbar from "./components/Toolbar";
+import { Divider } from "./components/divider";
+import { Toolbar } from "./components/toolbar";
 import { ReactTipTapEditorContext } from "./context";
 import * as actions from "./lib/actions";
 import { cn } from "./lib/utils";
@@ -16,7 +16,7 @@ export type ReactTipTapEditorProps = PropsWithChildren<{
 export type ReactTipTapEditorFactory = React.FC<ReactTipTapEditorProps> & {
 	Content: typeof Content;
 	Toolbar: typeof Toolbar;
-	Spacer: typeof Spacer;
+	Divider: typeof Divider;
 	Undo: typeof actions.Undo;
 	Redo: typeof actions.Redo;
 	Bold: typeof actions.Bold;
@@ -60,7 +60,7 @@ export const ReactTipTapEditor: ReactTipTapEditorFactory = ({
 ReactTipTapEditor.displayName = "ReactTipTapEditor";
 ReactTipTapEditor.Content = Content;
 ReactTipTapEditor.Toolbar = Toolbar;
-ReactTipTapEditor.Spacer = Spacer;
+ReactTipTapEditor.Divider = Divider;
 ReactTipTapEditor.Undo = actions.Undo;
 ReactTipTapEditor.Redo = actions.Redo;
 ReactTipTapEditor.Bold = actions.Bold;

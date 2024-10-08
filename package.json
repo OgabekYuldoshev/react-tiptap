@@ -5,7 +5,7 @@
     "build": "turbo build",
     "dev": "turbo dev",
     "check": "turbo check",
-    "prepublish": "turbo run build --filter=react-note",
+    "prepublish": "turbo run build --filter=react-tiptap",
     "changeset": "changeset",
     "cv": "changeset version",
     "release": "changeset publish"

@@ -3,9 +3,15 @@ import { useEditor } from "@tiptap/react";
 import { StarterKit } from "@tiptap/starter-kit";
 import { ReactTipTapEditor } from "react-tiptap";
 
+import Placeholder from "@tiptap/extension-placeholder";
 const App = () => {
 	const editor = useEditor({
-		extensions: [StarterKit],
+		extensions: [
+			StarterKit,
+			Placeholder.configure({
+				placeholder: "Write something …",
+			}),
+		],
 	});
 
 	return (

@@ -1,12 +1,13 @@
 import { Editor } from "@tiptap/core";
+import clsx from "clsx";
 import * as React from "react";
 import { PropsWithChildren } from "react";
-import Content from "./components/Content";
+import styles from "./ReactTipTapEditor.module.scss";
+import { Content } from "./components/content";
 import { Divider } from "./components/divider";
 import { Toolbar } from "./components/toolbar";
 import { ReactTipTapEditorContext } from "./context";
 import * as actions from "./lib/actions";
-import { cn } from "./lib/utils";
 
 export type ReactTipTapEditorProps = PropsWithChildren<{
 	editor: Editor | null;
@@ -48,11 +49,7 @@ export const ReactTipTapEditor: ReactTipTapEditorFactory = ({
 
 	return (
 		<ReactTipTapEditorContext.Provider value={{ editor }}>
-			<div
-				className={cn("react-note rn-w-full rn-border rn-rounded", className)}
-			>
-				{children}
-			</div>
+			<div className={clsx(styles.wrapper, className)}>{children}</div>
 		</ReactTipTapEditorContext.Provider>
 	);
 };

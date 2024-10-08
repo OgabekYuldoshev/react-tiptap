@@ -1,0 +1,22 @@
+.wrapper {
+    display: block;
+
+    &Content {
+        display: block;
+    }
+
+    & :global(.ProseMirror) {
+        padding: 0.5em 1em;
+        outline: 0;
+
+        & :global(.is-editor-empty) {
+            &:first-child::before {
+                color: var(--rt-muted-foreground);
+                content: attr(data-placeholder);
+                float: left;
+                height: 0;
+                pointer-events: none;
+            }
+        }
+    }
+}

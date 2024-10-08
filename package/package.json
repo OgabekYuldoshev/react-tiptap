@@ -1,6 +1,6 @@
 {
   "name": "react-tiptap",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "React tiptap rich text editor",
   "source": "./src/index.ts",
   "main": "./dist/index.js",

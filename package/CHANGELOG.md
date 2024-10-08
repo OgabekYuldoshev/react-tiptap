@@ -1,5 +1,11 @@
 # react-tiptap
 
+## 0.0.3
+
+### Patch Changes
+
+- Fix
+
 ## 0.0.2
 
 ### Patch Changes

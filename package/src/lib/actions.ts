@@ -4,13 +4,13 @@ export const Undo = createAction({
 	label: "Undo",
 	icon: "Undo",
 	onDisabled: (editor: any) => !editor?.can().undo(),
-	onClick: (editor: any) => editor.chain().undo().run()
+	onClick: (editor: any) => editor.chain().undo().run(),
 });
 export const Redo = createAction({
 	label: "Redo",
 	icon: "Redo",
 	onDisabled: (editor: any) => !editor?.can().redo(),
-	onClick: (editor: any) => editor.chain().redo().run()
+	onClick: (editor: any) => editor.chain().redo().run(),
 });
 
 export const Bold = createAction({
@@ -95,46 +95,52 @@ export const H1 = createAction({
 	label: "H1",
 	icon: "Heading1",
 	onActive: (editor) => editor.isActive("heading", { level: 1 }),
-	onClick: (editor: any) => editor.chain().focus().toggleHeading({ level: 1 }).run(),
-	onDisabled: (editor: any) => !editor?.can().toggleHeading({ level: 1 })
+	onClick: (editor: any) =>
+		editor.chain().focus().toggleHeading({ level: 1 }).run(),
+	onDisabled: (editor: any) => !editor?.can().toggleHeading({ level: 1 }),
 });
 
 export const H2 = createAction({
 	label: "H2",
 	icon: "Heading2",
 	onActive: (editor) => editor.isActive("heading", { level: 2 }),
-	onClick: (editor: any) => editor.chain().focus().toggleHeading({ level: 2 }).run(),
-	onDisabled: (editor: any) => !editor?.can().toggleHeading({ level: 2 })
+	onClick: (editor: any) =>
+		editor.chain().focus().toggleHeading({ level: 2 }).run(),
+	onDisabled: (editor: any) => !editor?.can().toggleHeading({ level: 2 }),
 });
 
 export const H3 = createAction({
 	label: "H3",
 	icon: "Heading3",
 	onActive: (editor) => editor.isActive("heading", { level: 3 }),
-	onClick: (editor: any) => editor.chain().focus().toggleHeading({ level: 3 }).run(),
-	onDisabled: (editor: any) => !editor?.can().toggleHeading({ level: 3 })
+	onClick: (editor: any) =>
+		editor.chain().focus().toggleHeading({ level: 3 }).run(),
+	onDisabled: (editor: any) => !editor?.can().toggleHeading({ level: 3 }),
 });
 
 export const H4 = createAction({
 	label: "H4",
 	icon: "Heading4",
 	onActive: (editor) => editor.isActive("heading", { level: 4 }),
-	onClick: (editor: any) => editor.chain().focus().toggleHeading({ level: 4 }).run(),
-	onDisabled: (editor: any) => !editor?.can().toggleHeading({ level: 4 })
+	onClick: (editor: any) =>
+		editor.chain().focus().toggleHeading({ level: 4 }).run(),
+	onDisabled: (editor: any) => !editor?.can().toggleHeading({ level: 4 }),
 });
 
 export const H5 = createAction({
 	label: "H5",
 	icon: "Heading5",
 	onActive: (editor) => editor.isActive("heading", { level: 5 }),
-	onClick: (editor: any) => editor.chain().focus().toggleHeading({ level: 5 }).run(),
-	onDisabled: (editor: any) => !editor?.can().toggleHeading({ level: 5 })
+	onClick: (editor: any) =>
+		editor.chain().focus().toggleHeading({ level: 5 }).run(),
+	onDisabled: (editor: any) => !editor?.can().toggleHeading({ level: 5 }),
 });
 
 export const H6 = createAction({
 	label: "H6",
 	icon: "Heading6",
 	onActive: (editor) => editor.isActive("heading", { level: 6 }),
-	onClick: (editor: any) => editor.chain().focus().toggleHeading({ level: 6 }).run(),
-	onDisabled: (editor: any) => !editor?.can().toggleHeading({ level: 6 })
+	onClick: (editor: any) =>
+		editor.chain().focus().toggleHeading({ level: 6 }).run(),
+	onDisabled: (editor: any) => !editor?.can().toggleHeading({ level: 6 }),
 });
